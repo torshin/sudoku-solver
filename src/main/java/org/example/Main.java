@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public final class Main {
+    private Main() {}
+
     public static void main(String[] args) {
         List<Integer> integers;
         if (args.length == 0) {
@@ -16,7 +18,6 @@ public class Main {
             integers = readArgs(args);
         }
         Field field = new Field(integers);
-        Field initial = new Field(integers);
         field.solve();
 
     }
